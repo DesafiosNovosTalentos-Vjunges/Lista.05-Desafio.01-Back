@@ -16,7 +16,8 @@ class OrderService {
                 'amount' => $dto->amount,
                 'status' => 'pending', 
             ]);
-
+            
+            SendOrderNotificationJob::dispatch($order);
             return $order;
         });
     }
