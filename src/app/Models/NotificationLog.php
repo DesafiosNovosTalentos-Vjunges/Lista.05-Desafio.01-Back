@@ -10,7 +10,7 @@ class NotificationLog extends Model
 {
     use HasFactory, HasUuids;
 
-    private $fillable = [
+    protected $fillable = [
         'user_id', 
         'order_id', 
         'message', 

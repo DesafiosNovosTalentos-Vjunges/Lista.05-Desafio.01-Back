@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    private OrderServicer $order_service;
+    private OrderService $order_service;
 
     public function __construct(OrderService $order_service){
         $this->order_service = $order_service;
@@ -25,7 +25,7 @@ class OrderController extends Controller
 
     public function store(StoreOrderRequest $request): JsonResponse {
         $dto = CreateOrderDTO::fromRequest($request);
-        $order = $this->orderService->createOrder($dto);
+        $order = $this->order_service->createOrder($dto);
 
         return response()->json([
             'message' => 'Pedido criado com sucesso! A notificação será enviada em breve.',

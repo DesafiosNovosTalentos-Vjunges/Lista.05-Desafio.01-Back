@@ -10,7 +10,7 @@ class Order extends Model
 {
     use HasFactory, HasUuids;
 
-    private $fillable = [
+    protected $fillable = [
         'user_id', 
         'product_name', 
         'amount', 
