@@ -13,14 +13,14 @@ class RetryFailedNotifications extends Command
      *
      * @var string
      */
-    private $signature = 'notifications:retry-failed';
+    protected $signature = 'notifications:retry-failed';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    private $description = 'Reenvia as notificações de pedidos que falharam (status failed)';
+    protected $description = 'Reenvia as notificações de pedidos que falharam (status failed)';
 
     /**
      * Execute the console command.
