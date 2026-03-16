@@ -34,7 +34,7 @@ class RetryFailedNotifications extends Command
             return;
         }
 
-        $this->info("Encontradas {$failedLogs->count()} notificações falhas. Reiniciando o envio!");
+        $this->info("Encontradas {$failed_logs->count()} notificações falhas. Reiniciando o envio!");
 
         foreach($failed_logs as $log){
             if($log->order){
